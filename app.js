@@ -8,7 +8,7 @@ const notFound = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 const products = require("./routes/products");
 
-//middleware
+//middleware //...//
 
 app.use(express.static("./public"));
 app.use(express.json());
