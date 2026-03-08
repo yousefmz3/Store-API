@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 require("dotenv").config();
+require("express-async-errors");
 const notFound = require("./middleware/not-found");
 const errorHandlerMiddleware = require("./middleware/error-handler");
 const products = require("./routes/products");
@@ -22,7 +23,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/v1/products", products);
 
-//products route
+//products route 
 
 app.use(notFound);
 app.use(errorHandlerMiddleware);
